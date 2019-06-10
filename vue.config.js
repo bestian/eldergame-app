@@ -8,10 +8,6 @@ module.exports = {
           .test(/\.pug$/)
           .use('pug-html-loader')
           .loader('pug-html-loader')
-          .rule('scss')
-          .test(/\.scss$/)
-          .use('sass-loader')
-          .loader('sass-loader')
           .end()
   }
 }
