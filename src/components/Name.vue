@@ -26,7 +26,7 @@
           </div>
         </div>
       </div>
-      <div class="ui raised card" v-for = "(c, index) in card_list" :key = "c.name" v-if="card_list[a].name != card_list[index].name && !c.hide && hard">
+      <div class="ui raised card" v-for = "(c, index) in card_list" :key = "c.name" v-show="card_list[a].name != card_list[index].name && !c.hide && hard">
         <div class="image" v-bind:class="[memory ? 'm' : 'n']">
           <img :src="c.img"/>
         </div>
