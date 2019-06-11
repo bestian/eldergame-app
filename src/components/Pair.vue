@@ -10,7 +10,7 @@
         </span>
       </label>
     </div>
-    <h1>左右出現同一人時，<br class="thin-only"/>請按空白鍵或圖
+    <h1>左右出現同一人時，<br class="thin-only"/>請按其中一張圖
     </h1>
     <div class="ui equal width grid">
       <div class="column" v-tap @click="check()" @touchstart="check()">
@@ -205,7 +205,7 @@ img.a {
 
 @media screen and (max-width: 600px) {
   .big.header {
-    font-size: 2em !important;
+    font-size: 3em !important;
   }
 }
 
