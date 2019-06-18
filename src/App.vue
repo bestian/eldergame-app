@@ -1,57 +1,23 @@
 <template>
   <div id="app">
-    <div class="ui fixed top mini menu thin-only no-print">
-      <router-link class = 'item ' to='/' exact=''>
-        <i class="home icon" />
-      </router-link>
-      <router-link class = 'item' to='/pair' exact=''>
-        配對
-      </router-link>
-      <router-link class = 'item' to='/spin' exact=''>
-        旋轉
-      </router-link>
-      <router-link class = 'item' to='/name' exact=''>
-        認人
-      </router-link>
-      <router-link class = 'item' to='/fishing' exact=''>
-        釣魚
-      </router-link>
-      <router-link class = 'item' to='/edit' exact=''>
-        編輯
-      </router-link>
-      <div class="right item fat-only">
-        <!--<a href="https://github.com/bestian/elder/" target="_blank" title="View it on Github">
-          <i class="github icon" />
-        </a>-->
-        <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fwww.elder.game.tw%2F%23%2F&layout=button_count&size=small&mobile_iframe=true&appId=485195848253155&width=50&height=20" width="50" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-      </div>
-
-    </div>
     <div class="ui fixed top labeled icon menu fat-only no-print">
-      <router-link class = 'item ' to='/' exact=''>
-        <i class="home icon" />回首頁
-      </router-link>
       <router-link class = 'item ' to='/pair' exact=''>
-        <i class="balance scale icon" />配對遊戲
-      </router-link>
-      <router-link class = 'item ' to='/spin' exact=''>
-        <i class="recycle icon" />旋轉遊戲
+        <i class="balance scale icon" />配對
       </router-link>
       <router-link class = 'item' to='/name' exact=''>
-        <i class="address book icon" />認人遊戲
+        <i class="address book icon" />認人
       </router-link>
       <router-link class = 'item' to='/fishing' exact=''>
-        <i class="clone icon" />釣魚遊戲
+        <i class="clone icon" />釣魚
       </router-link>
       <router-link class = 'item' to='/edit' exact=''>
-        <i class="cogs icon" />編輯照片
+        <i class="cogs icon" />編輯
       </router-link>
     </div>
     <transition name='fade' mode='out-in'>
       <router-view @addCard="addCard" @removeCard = "removeCard"
-      @addEvent="addEvent" @removeEvent = "removeEvent" @changeEvent = "changeEvent" @saveEvents = "saveEvents"
       @hideShow = "hideShow" @saveCards = "saveCards"
-      :card_list = "card_list" :event_list = "event_list"/>
+      :card_list = "card_list"/>
     </transition>
   </div>
 </template>
@@ -80,35 +46,6 @@ export default {
     saveCards: function (list) {
       this.card_list = list
       this.setLocal('card_list')
-    },
-    saveEvents: function (list) {
-      this.event_list = list
-      this.sortEvent()
-      this.setLocal('event_list')
-    },
-    sortEvent: function () {
-      this.event_list.sort(function (a, b) {
-        var a1 = String(a.year).split('.')[0]
-        var a2 = String(a.year).split('.')[1] || 0
-        var b1 = String(b.year).split('.')[0]
-        var b2 = String(b.year).split('.')[1] || 0
-
-        return Number(b1) + Number(b2) / 100 - Number(a1) - Number(a2) / 100
-      })
-    },
-    addEvent: function (obj) {
-      this.event_list.push(obj)
-      this.sortEvent()
-      this.setLocal('event_list')
-    },
-    changeEvent: function (index, obj) {
-      this.event_list[index] = obj
-      this.sortEvent()
-      this.setLocal('event_list')
-    },
-    removeEvent: function (index) {
-      this.event_list.splice(index, 1)
-      this.setLocal('event_list')
     },
     hideShow: function (index, bool) {
       this.card_list[index].hide = bool

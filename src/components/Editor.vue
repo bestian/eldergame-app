@@ -8,7 +8,26 @@
         <div class="item">
           <div class="upload-btn-wrapper">
             <button class="btn"><i class="upload icon"/>選擇圖檔</button>
-            <input type="file" @change="previewImage" name="photo" id="photo"  accept="image/*">
+            
+            <template>
+              <image-uploader
+                :debug="1"
+                :maxWidth="512"
+                :quality="0.7"
+                :autoRotate=true
+                outputFormat="verbose"
+                :preview=false
+                :className="['fileinput', { 'fileinput--loaded' : hasImage }]"
+                capture="environment"
+                accept="image/*"
+                doNotResize="['gif', 'svg']"
+                @input="setImage"
+              ></image-uploader>
+            </template>
+<!--
+            <input type="file" @change="previewImage" name="photo" id="photo"  accept="image/*"> -->
+            
+
             <img v-show="url" :src="url" />
           </div>
         </div>
@@ -80,6 +99,10 @@ export default {
     },
     hideShow: function (index, bool) {
       this.$emit('hideShow', index, bool)
+    },
+    setImage: function (file) {
+      this.hasImage = true
+      this.url = file.dataUrl
     },
     previewImage: function (event) {
       var input = event.target

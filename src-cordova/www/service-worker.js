@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.acd0fd3690fd8f6f706cf4bf32a5e2f4.js"
+  "precache-manifest.688323e256f6b0ec14b310df0b4c463d.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "eldergame"});

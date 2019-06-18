@@ -5,7 +5,7 @@
       <h2>點擊上下排卡片，<br class="thin-only"/>找出相同的，<br class="thin-only"/>對的那組圖會消失，<br class="thin-only"/>直到清空</h2>
     </div>
     <div class="ui grid">
-      <div class="doubling six column row">
+      <div class="doubling four column row">
         <div class="column" v-for = "(f, index) in fishs1" :key="f.img+index" v-bind:class="[!memory || face0 == index ? 'face' : 'back', f.img ? 'good' : 'null', face0 == index ? 'focus' : 'other']">
           <div class="ui centered card" v-tap @click = "flip(index,0) " @mouseover = "flip(index,0)">
             <div class="content">
@@ -19,7 +19,7 @@
       </div>
     </div>
     <div class="ui grid">
-      <div class="doubling six column row">
+      <div class="doubling four column row">
         <div class="r column" v-for = "(f, index) in fishs2" :key="index" v-bind:class="[!memory || face1 == index ? 'face' : 'back', f.img ? 'good' : 'null', face1 == index ? 'focus' : 'other']">
           <div class="ui centered card" v-tap @click = "flip(index,1)" @mouseover = "flip(index,1)">
             <div class="content">
@@ -110,7 +110,7 @@ export default {
     reset: function () {
       this.fishs1 = this.card_list.filter(function (o) { return !o.hide }).slice().sort(function () {
         return Math.random() - 0.5
-      }).slice(0, 6)
+      }).slice(0, 4)
       this.fishs2 = this.fishs1.filter(function (o) { return !o.hide }).slice().sort(function () {
         return Math.random() - 0.5
       })

@@ -25,6 +25,7 @@
     "semantic-ui-css": "^2.4.1",
     "vtap": "^1.0.0",
     "vue": "^2.6.10",
+    "vue-image-upload-resize": "^2.0.4",
     "vue-localstorage": "^0.6.2",
     "vue-router": "^3.0.3",
     "vue-star-rating": "^1.6.1"
