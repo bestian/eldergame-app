@@ -86,6 +86,7 @@ export default {
   data () {
     return {
       url: '',
+      hasImage: false,
       name: '',
       my_card_list: []
     }

@@ -5,7 +5,7 @@
       <h2>點擊上下排卡片，<br class="thin-only"/>找出相同的，<br class="thin-only"/>對的那組圖會消失，<br class="thin-only"/>直到清空</h2>
     </div>
     <div class="ui grid">
-      <div class="doubling four column row">
+      <div class="four column row">
         <div class="column" v-for = "(f, index) in fishs1" :key="f.img+index" v-bind:class="[!memory || face0 == index ? 'face' : 'back', f.img ? 'good' : 'null', face0 == index ? 'focus' : 'other']">
           <div class="ui centered card" v-tap @click = "flip(index,0) " @mouseover = "flip(index,0)">
             <div class="content">
@@ -19,7 +19,7 @@
       </div>
     </div>
     <div class="ui grid">
-      <div class="doubling four column row">
+      <div class="four column row">
         <div class="r column" v-for = "(f, index) in fishs2" :key="index" v-bind:class="[!memory || face1 == index ? 'face' : 'back', f.img ? 'good' : 'null', face1 == index ? 'focus' : 'other']">
           <div class="ui centered card" v-tap @click = "flip(index,1)" @mouseover = "flip(index,1)">
             <div class="content">
@@ -147,7 +147,6 @@ export default {
   .card {
     background-color: #c9ffc9;
     min-height: 20vh;
-    margin: 10px;
     border: 2px black solid;
     border-radius: 15px;
     cursor: pointer;
