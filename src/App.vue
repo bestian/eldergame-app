@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="ui fixed top labeled icon menu fat-only no-print">
+    <div class="ui fixed top labeled icon menu no-print">
       <router-link class = 'item ' to='/pair' exact=''>
         <i class="balance scale icon" />配對
       </router-link>
