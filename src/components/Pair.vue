@@ -1,15 +1,5 @@
 <template>
   <div class="hello">
-    <br class="fat-only" />
-    <div class="ui slider checkbox">
-      <input type="checkbox" id="checkbox" v-model="record">
-      <label for="checkbox"><i class = "eye icon" />顯示紀錄
-        <span v-show = "record">
-          <i class="smile icon"/>:{{good}}
-          <i class="thumbs down icon"/>:{{bad}}
-        </span>
-      </label>
-    </div>
     <h1>左右出現同一人時，<br class="thin-only"/>請按其中一張圖
     </h1>
     <div class="ui equal width grid">

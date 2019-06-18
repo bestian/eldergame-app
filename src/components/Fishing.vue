@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="hello">
     <div class="intro">
       <br class="fat-only"/>
       <h2>點擊上下排卡片，<br class="thin-only"/>找出相同的，<br class="thin-only"/>對的那組圖會消失，<br class="thin-only"/>直到清空</h2>
@@ -32,6 +32,7 @@
         </div>
       </div>
     </div>
+    <br/>
     <div class="field">
       <div class="ui slider checkbox">
         <input type="checkbox" id="checkbox" v-model="memory">
@@ -128,6 +129,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
   li {
     text-align: center;
     display: inline-block;
@@ -161,6 +163,10 @@ export default {
   .image {
     height: 20vh !important;
     overflow: hidden;
+  }
+  .column {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
   .column.back img {
     visibility: hidden;

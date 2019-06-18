@@ -1,15 +1,5 @@
 <template>
   <div>
-    <br class="fat-only" />
-    <div class="ui slider checkbox">
-      <input type="checkbox" id="checkbox" v-model="record">
-      <label for="checkbox"><i class = "eye icon" />顯示紀錄
-        <span v-show = "record">
-          <i class="smile icon"/>:{{good}}
-          <i class="thumbs down icon"/>:{{bad}}
-        </span>
-      </label>
-    </div>
     <h1>轉到正中間時，<br class="thin-only"/>請按空白鍵或圖
     </h1>
     <div class="ui centered card clickable" v-bind:class="{good: isWin()}" v-if="!hard" v-bind:style="{ transform: 'rotate(-'+ deg +'deg)' }" v-show = "!winning" v-tap @click="check()" @touchstart="check()">

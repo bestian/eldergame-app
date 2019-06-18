@@ -15,27 +15,16 @@
                 您家中有年紀大的長輩嗎？
               </p>
               <p>
-                本站作者最初是為了自己的外婆，寫了認照片遊戲，提供娛樂與刺激。
-              </p>
-              <p>
-                目前提供4種認照片遊戲，讓您輸入自己家族成員的照片，幫助長輩記得大家。
+                您可以輸入自己家族成員的照片，幫助長輩記得大家。
               </p>
               <p></p>
             </div>
-            <div class="ui two bottom attached buttons thin-only">
-              <router-link class = "ui green button" to='/intro' exact=''>
-                <i class="balance scale icon" /><br class="thin-only" />玩遊戲
+            <div class="ui two bottom attached buttons">
+              <router-link class = "ui huge green button" to='/intro' exact=''>
+                <i class="balance scale icon" /><br/><br/>玩遊戲
               </router-link>
-              <router-link class = "ui blue button" to='/edit' exact=''>
-                <i class="cogs icon" /><br class="thin-only" />輸入照片
-              </router-link>
-            </div>
-            <div class="ui two bottom massive attached buttons fat-only">
-              <router-link class = "ui green button" to='/intro' exact=''>
-                <i class="balance scale icon" /><br class="thin-only" />玩遊戲
-              </router-link>
-              <router-link class = "ui blue button" to='/edit' exact=''>
-                <i class="cogs icon" /><br class="thin-only" />輸入照片
+              <router-link class = "ui huge blue button" to='/edit' exact=''>
+                <i class="cogs icon" /><br/><br/>輸入照片
               </router-link>
             </div>
           </div>

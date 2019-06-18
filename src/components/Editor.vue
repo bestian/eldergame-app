@@ -66,10 +66,6 @@
     </div>
     <div class="ui labeled icon menu no-print">
       <div class="item">
-        <a @click="exportCards()"><i class="download icon" />匯出JSON</a>
-        <a id="downloadAnchorElem" style="display:none"></a>
-      </div>
-      <div class="item">
         <div class="upload-btn-wrapper">
           <button class="btn"><i class="upload icon"/>匯入JSON</button>
           <input type="file" @change="importJSON" name="json" id="json" accept="application/json">

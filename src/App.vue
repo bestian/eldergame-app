@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-    <div class="ui fixed top labeled icon menu no-print">
+    <div class="ui top labeled icon menu no-print">
       <router-link class = 'item ' to='/pair' exact=''>
-        <i class="balance scale icon" />配對
+        <i class="balance scale icon" />
+        <span class="big">配對</span>
       </router-link>
       <router-link class = 'item' to='/name' exact=''>
-        <i class="address book icon" />認人
+        <i class="address book icon" />
+        <span class="big">認人</span>
       </router-link>
       <router-link class = 'item' to='/fishing' exact=''>
-        <i class="clone icon" />釣魚
+        <i class="clone icon" />
+        <span class="big">釣魚</span>
       </router-link>
       <router-link class = 'item' to='/edit' exact=''>
-        <i class="cogs icon" />編輯
+        <i class="cogs icon" />
+        <span class="big">編輯</span>
       </router-link>
     </div>
     <transition name='fade' mode='out-in'>
@@ -75,6 +79,12 @@ export default {
 
 <style>
 
+html, body {
+  padding: 0 !important;
+  overflow-y: scroll;
+  height: 100vh;
+  background-color: #ffc !important;
+}
 
 .fade-leave {  }
 
@@ -92,9 +102,6 @@ export default {
   transition: all .5s ease-in;
 }
 
-body, html {
-  height: auto;
-}
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -102,7 +109,11 @@ body, html {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  background-color: #ffc;
+}
+
+.menu .item .big {
+  font-size: 1.5em;
 }
 
 .print-only {
