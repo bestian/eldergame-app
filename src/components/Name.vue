@@ -12,11 +12,11 @@
       </div>
       <div class="ui raised card">
         <div class="ui vertical buttons">
-          <div class="ui massive green button" v-for = "(c, index) in card_list" :key = "index" v-show="noDup(index) && !c.hide" v-tap @click = "b = index; check()" @touchstart="b = index; check()">{{ c.name }}<img class="avatar fat-only" :src="c.img"/>
+          <div class="ui massive green button" v-for = "(c, index) in card_list" :key = "index" v-show="noDup(index) && !c.hide" v-tap @click = "b = index; check()" @touchstart="b = index; check()">{{ c.name }}<img class="avatar" :src="c.img"/>
           </div>
         </div>
       </div>
-      <div class="ui raised card">
+      <div class="ui raised card" v-show = "hard">
         <div class="image" v-for = "(c, index) in card_list" :key = "c.name" v-show="card_list[a].name != card_list[index].name && !c.hide && hard">
           <img :src="c.img"/>
         </div>

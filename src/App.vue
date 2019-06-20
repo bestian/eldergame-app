@@ -13,7 +13,13 @@
         <i class="clone icon" />
         <span class="big">釣魚</span>
       </router-link>
-      <router-link class = 'item' to='/edit' exact=''>
+
+      <router-link class = 'item fat-only' to='/spin' exact=''>
+        <i class="recycle icon" />
+        <span class="big">旋轉</span>
+      </router-link>
+      
+      <router-link class = 'item' to="edit">
         <i class="cogs icon" />
         <span class="big">編輯</span>
       </router-link>
@@ -32,9 +38,11 @@ export default {
   data () {
     return {
       card_list: [
-        {img: 'http://www.elder.game.tw/static/img/angel.jpg', name: '天使'},
-        {img: 'http://www.elder.game.tw/static/img/face.png', name: '圓臉'},
-        {img: 'http://www.elder.game.tw/static/img/worm.png', name: '蟲蟲'}
+        {img: 'https://i.imgur.com/9g8Snz6.jpg', name: '天使'},
+        {img: 'https://i.imgur.com/41zpBhQ.jpg', name: '山'},
+        {img: 'https://i.imgur.com/1vZiSGf.jpg', name: '瀑布'},
+        {img: 'https://i.imgur.com/rPCYQls.png', name: '圓臉'},
+        {img: 'https://i.imgur.com/SuLzJZ3.png', name: '蟲蟲'}
       ]
     }
   },

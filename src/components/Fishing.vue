@@ -7,7 +7,7 @@
     <div class="ui grid">
       <div class="four column row">
         <div class="column" v-for = "(f, index) in fishs1" :key="f.img+index" v-bind:class="[!memory || face0 == index ? 'face' : 'back', f.img ? 'good' : 'null', face0 == index ? 'focus' : 'other']">
-          <div class="ui centered card" v-tap @click = "flip(index,0) " @mouseover = "flip(index,0)">
+          <div class="ui centered card" v-tap @click = "flip(index,0) ">
             <div class="content">
               <span class="header" v-show="!hard">{{!memory || face0 == index ? f.name : '?'}}</span>
             </div>
@@ -21,7 +21,7 @@
     <div class="ui grid">
       <div class="four column row">
         <div class="r column" v-for = "(f, index) in fishs2" :key="index" v-bind:class="[!memory || face1 == index ? 'face' : 'back', f.img ? 'good' : 'null', face1 == index ? 'focus' : 'other']">
-          <div class="ui centered card" v-tap @click = "flip(index,1)" @mouseover = "flip(index,1)">
+          <div class="ui centered card" v-tap @click = "flip(index,1)">
             <div class="content">
               <span class="header">{{!memory || face1 == index ? f.name : '?'}}</span>
             </div>
