@@ -3,7 +3,8 @@
     <br class="fat-only"/>
 
     <div class="ui segment container no-print">
-      <h1 class="ui header">如何新增照片：</h1>
+      <h1 class="ui header">如何新增照片：
+      <h3 class="ui sub header">(您的照片不會上傳網路，完全和其他人獨立)</h3></h1>
       <div class="ui large ordered list">
         <div class="item">
           <div class="upload-btn-wrapper">
