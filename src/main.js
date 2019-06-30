@@ -9,7 +9,7 @@ require('semantic-ui-css/semantic.css')
 
 Vue.config.productionTip = false
 Vue.use(VueLocalStorage)
-Vue.use(ImageUploader);
+Vue.use(ImageUploader)
 
 new Vue({
   router,
