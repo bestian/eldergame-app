@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>轉到正中間時，<br class="thin-only"/>請按空白鍵或圖
+    <h1>轉到正中間時，<br class="thin-only"/>請按圖
     </h1>
     <div class="ui centered card clickable" v-bind:class="{good: isWin()}" v-if="!hard" v-bind:style="{ transform: 'rotate(-'+ deg +'deg)' }" v-show = "!winning" v-tap @click="check()" @touchstart="check()">
       <div class="content">
